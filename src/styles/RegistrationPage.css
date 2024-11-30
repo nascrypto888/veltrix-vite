@@ -1,0 +1,657 @@
+/* Modern Registration Page Styling 2024 */
+.registration-page {
+    background: linear-gradient(145deg, #121212, #1a1a1a);
+    min-height: calc(100vh - 70px);
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 2rem 1rem;
+    font-family: 'Inter', sans-serif;
+    overflow-x: hidden;
+}
+
+.registration-container {
+    background: rgba(30, 30, 46, 0.7);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 24px;
+    width: 100%;
+    max-width: 480px;
+    padding: 2rem;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+    position: relative;
+    overflow: hidden;
+    animation: fadeIn 0.5s ease-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Floating Elements Effect */
+.registration-container::before,
+.registration-container::after {
+    content: '';
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    background: linear-gradient(45deg, #06bcee, #0099ff);
+    filter: blur(80px);
+    opacity: 0.1;
+    z-index: -1;
+}
+
+.registration-container::before {
+    top: -150px;
+    left: -150px;
+}
+
+.registration-container::after {
+    bottom: -150px;
+    right: -150px;
+}
+
+h1 {
+    font-size: 2rem;
+    font-weight: 800;
+    margin-bottom: 2rem;
+    background: linear-gradient(45deg, #06bcee, #0099ff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-align: center;
+    letter-spacing: -0.5px;
+    position: relative;
+    padding-bottom: 1rem;
+}
+
+h1::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 3px;
+    background: linear-gradient(45deg, #06bcee, #0099ff);
+    border-radius: 2px;
+}
+
+/* Upline Section with Modern Input */
+.upline-section {
+    margin-bottom: 2rem;
+    position: relative;
+}
+
+.upline-section label {
+    font-size: 0.9rem;
+    color: #8890b5;
+    margin-bottom: 0.5rem;
+    display: block;
+    transform: translateY(0);
+    transition: all 0.3s ease;
+}
+
+.upline-section input {
+    width: 100%;
+    padding: 1.2rem;
+    border: 2px solid rgba(255, 255, 255, 0.1);
+    border-radius: 16px;
+    background: rgba(255, 255, 255, 0.03);
+    color: #fff;
+    font-size: 1.1rem;
+    transition: all 0.3s ease;
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.upline-section input:focus {
+    border-color: #06bcee;
+    box-shadow: 0 0 0 3px rgba(6, 188, 238, 0.2);
+}
+
+/* Enhanced Status List */
+.status-list {
+    background: rgba(255, 255, 255, 0.03);
+    border-radius: 20px;
+    padding: 1.5rem;
+    margin: 2rem 0;
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.status-list li {
+    display: flex;
+    align-items: center;
+    padding: 1rem;
+    color: #8890b5;
+    font-size: 1rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    transition: all 0.3s ease;
+}
+
+.status-list li:hover {
+    background: rgba(255, 255, 255, 0.02);
+    transform: translateX(5px);
+}
+
+.status-list li:last-child {
+    border-bottom: none;
+}
+
+/* Modern Status Indicators */
+.status-success span,
+.status-error span {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    margin-right: 12px;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+.status-success span {
+    background: rgba(0, 255, 157, 0.1);
+    color: #00ff9d;
+    box-shadow: 0 0 10px rgba(0, 255, 157, 0.2);
+}
+
+.status-error span {
+    background: rgba(255, 77, 77, 0.1);
+    color: #ff4d4d;
+    box-shadow: 0 0 10px rgba(255, 77, 77, 0.2);
+}
+
+/* Modern Checkbox Design */
+.approve-section {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin: 2rem 0;
+    padding: 1.2rem;
+    background: rgba(6, 188, 238, 0.05);
+    border-radius: 16px;
+    border: 1px solid rgba(6, 188, 238, 0.1);
+    transition: all 0.3s ease;
+}
+
+.approve-section:hover {
+    background: rgba(6, 188, 238, 0.08);
+    transform: translateY(-2px);
+}
+
+.approve-section input[type="checkbox"] {
+    appearance: none;
+    width: 24px;
+    height: 24px;
+    border: 2px solid rgba(6, 188, 238, 0.5);
+    border-radius: 6px;
+    cursor: pointer;
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.approve-section input[type="checkbox"]:checked {
+    background: linear-gradient(145deg, #06bcee, #0099ff);
+    border-color: transparent;
+}
+
+.approve-section input[type="checkbox"]:checked::after {
+    content: '✓';
+    position: absolute;
+    color: white;
+    font-size: 16px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* Enhanced Buttons */
+.check-button,
+.read-guide-button {
+    width: 100%;
+    padding: 1.2rem;
+    border: none;
+    border-radius: 16px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    background: linear-gradient(145deg, #06bcee, #0099ff);
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    position: relative;
+    overflow: hidden;
+}
+
+.check-button::after,
+.read-guide-button::after {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: rgba(255, 255, 255, 0.1);
+    transform: rotate(45deg);
+    transition: all 0.3s ease;
+}
+
+.check-button:hover::after,
+.read-guide-button:hover::after {
+    transform: rotate(45deg) translate(50%, 50%);
+}
+
+/* Mobile Optimizations */
+@media (max-width: 768px) {
+    .registration-page {
+        padding: 1rem;
+    }
+
+    .registration-container {
+        padding: 1.5rem;
+        margin: 0;
+        border-radius: 20px;
+    }
+
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    .status-list li {
+        padding: 0.8rem;
+        font-size: 0.9rem;
+    }
+
+    .approve-section {
+        padding: 1rem;
+    }
+
+    .check-button,
+    .read-guide-button {
+        padding: 1rem;
+        font-size: 0.9rem;
+    }
+}
+
+/* Loading States */
+.loading {
+    position: relative;
+    overflow: hidden;
+}
+
+.loading::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 200%;
+    height: 100%;
+    background: linear-gradient(
+        90deg,
+        transparent,
+        rgba(255, 255, 255, 0.2),
+        transparent
+    );
+    animation: loading 1.5s infinite;
+}
+
+@keyframes loading {
+    from { transform: translateX(-100%); }
+    to { transform: translateX(100%); }
+}
+
+/* Smooth Scrolling */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.05);
+}
+
+::-webkit-scrollbar-thumb {
+    background: rgba(6, 188, 238, 0.5);
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: rgba(6, 188, 238, 0.7);
+}
+
+/* Add these new styles while keeping the existing ones */
+
+.registration-layout {
+    display: flex;
+    gap: 1.5rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
+    padding: 1.5rem;
+}
+
+.registration-form-container {
+    flex: 1;
+    min-width: 320px;
+    background: rgba(30, 30, 46, 0.7);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 24px;
+    padding: 2rem;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+}
+
+.info-container {
+    flex: 1;
+    min-width: 320px;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.info-card, .video-container, .support-card {
+    margin: 0;
+    padding: 1.5rem;
+}
+
+.info-card {
+    background: rgba(30, 30, 46, 0.7);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 24px;
+    padding: 2rem;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+}
+
+.info-header {
+    margin-bottom: 1.5rem;
+}
+
+.info-header h2 {
+    color: #fff;
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.info-divider {
+    height: 3px;
+    background: linear-gradient(90deg, #06bcee, #0099ff);
+    border-radius: 2px;
+    width: 60px;
+}
+
+.balance-display {
+    background: rgba(255, 255, 255, 0.03);
+    border-radius: 12px;
+    padding: 1rem;
+    margin-bottom: 1rem;
+}
+
+.balance-item {
+    padding: 0.5rem;
+}
+
+.balance-label {
+    color: #8890b5;
+}
+
+.balance-value {
+    color: #06bcee;
+    font-weight: 600;
+}
+
+.info-text {
+    color: #8890b5;
+    line-height: 1.4;
+    margin-bottom: 1rem;
+    text-align: justify;
+}
+
+.requirement-text {
+    font-size: 0.9rem;
+    display: block;
+    color: #8890b5;
+}
+
+.success-text {
+    color: #00ff9d;
+    font-weight: 500;
+}
+
+.video-container {
+    background: rgba(30, 30, 46, 0.7);
+    border-radius: 24px;
+    padding: 2rem;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+    margin-top: 1rem;
+}
+
+.video-container h3 {
+    color: #fff;
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+}
+
+.video-wrapper {
+    position: relative;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+.video-wrapper img {
+    width: 100%;
+    height: auto;
+    transition: transform 0.3s ease;
+}
+
+.video-wrapper:hover img {
+    transform: scale(1.02);
+}
+
+.support-card {
+    background: rgba(30, 30, 46, 0.7);
+    border-radius: 24px;
+    padding: 2rem;
+    text-align: center;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+    margin-top: 1rem;
+}
+
+.support-card h3 {
+    color: #fff;
+    margin-bottom: 1rem;
+}
+
+.support-card p {
+    color: #8890b5;
+    margin-bottom: 1rem;
+}
+
+.support-link {
+    display: inline-block;
+    color: #06bcee;
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.support-link:hover {
+    color: #0099ff;
+    transform: translateY(-2px);
+}
+
+/* Mobile Optimizations */
+@media (max-width: 1024px) {
+    .registration-layout {
+        flex-direction: column;
+        padding: 1rem;
+        gap: 1rem;
+    }
+
+    .registration-form-container,
+    .info-container {
+        width: 100%;
+        min-width: unset;
+    }
+
+    .registration-form-container {
+        padding: 1.5rem;
+        margin-bottom: 1rem;
+    }
+
+    /* Reduce bottom spacing in form container */
+    .registration-form-container .check-button {
+        margin-bottom: 0;
+    }
+
+    /* Adjust status list spacing */
+    .status-list {
+        margin: 1rem 0;
+    }
+
+    .approve-section {
+        margin: 1rem 0;
+    }
+}
+
+@media (max-width: 768px) {
+    .registration-page {
+        padding: 0.75rem;
+        min-height: unset; /* Remove fixed height constraint */
+    }
+
+    .registration-layout {
+        padding: 0;
+    }
+
+    /* Adjust form container spacing */
+    .registration-form-container {
+        padding: 1.25rem;
+        border-radius: 16px;
+    }
+
+    /* Adjust info container spacing */
+    .info-container {
+        gap: 0.75rem;
+    }
+
+    .info-card,
+    .video-container,
+    .support-card {
+        padding: 1.25rem;
+        border-radius: 16px;
+        margin-top: 0.75rem;
+    }
+
+    /* Adjust text sizes for mobile */
+    h1 {
+        font-size: 1.5rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .info-header h2 {
+        font-size: 1.3rem;
+    }
+
+    .video-container h3,
+    .support-card h3 {
+        font-size: 1.1rem;
+    }
+
+    /* Adjust balance display for mobile */
+    .balance-display {
+        padding: 0.75rem;
+        margin-bottom: 0.75rem;
+    }
+
+    .balance-item {
+        padding: 0.4rem;
+        font-size: 0.9rem;
+    }
+
+    /* Adjust button sizes */
+    .check-button,
+    .read-guide-button {
+        padding: 0.9rem;
+        font-size: 0.9rem;
+    }
+
+    /* Improve video container on mobile */
+    .video-wrapper {
+        margin: 0.5rem 0;
+    }
+
+    /* Adjust support card spacing */
+    .support-card p {
+        font-size: 0.9rem;
+        margin-bottom: 0.75rem;
+    }
+
+    /* Remove unnecessary animations on mobile */
+    .info-card,
+    .video-container,
+    .support-card {
+        animation: none;
+    }
+}
+
+/* Add smooth scroll behavior for mobile */
+@media (max-width: 768px) {
+    .registration-page {
+        overflow-y: auto;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    /* Improve touch scrolling */
+    .registration-layout {
+        touch-action: pan-y;
+    }
+}
+
+/* Add loading skeleton for mobile */
+@media (max-width: 768px) {
+    .loading-skeleton {
+        background: linear-gradient(
+            90deg,
+            rgba(255, 255, 255, 0.03) 25%,
+            rgba(255, 255, 255, 0.05) 50%,
+            rgba(255, 255, 255, 0.03) 75%
+        );
+        background-size: 200% 100%;
+        animation: loading 1.5s infinite;
+    }
+}
+
+/* Fix iOS Safari issues */
+@supports (-webkit-touch-callout: none) {
+    .registration-page {
+        min-height: -webkit-fill-available;
+    }
+
+    .registration-layout {
+        padding-bottom: env(safe-area-inset-bottom);
+    }
+}
+
+/* Add better tap highlight for mobile */
+@media (max-width: 768px) {
+    .check-button,
+    .read-guide-button,
+    .support-link {
+        -webkit-tap-highlight-color: transparent;
+    }
+
+    .check-button:active,
+    .read-guide-button:active {
+        opacity: 0.8;
+    }
+}

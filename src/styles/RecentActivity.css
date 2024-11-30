@@ -1,0 +1,133 @@
+/* src/components/RecentActivity.css */
+.recent-activity-container {
+  background: linear-gradient(145deg, #2a2a2a, #333);
+  border-radius: 12px;
+  padding: 24px;
+  color: #fff;
+  width: 100%;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.recent-activity-container h2 {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+  color: #06bcee;
+  font-weight: 600;
+}
+
+.activity-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  max-height: 480px;
+  overflow-y: auto;
+  padding-right: 8px;
+}
+
+.activity-list::-webkit-scrollbar {
+  width: 6px;
+}
+
+.activity-list::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 3px;
+}
+
+.activity-list::-webkit-scrollbar-thumb {
+  background: #06bcee;
+  border-radius: 3px;
+}
+
+.activity-item {
+  display: flex;
+  align-items: center;
+  background: rgba(26, 26, 26, 0.6);
+  padding: 16px;
+  border-radius: 8px;
+  transition: transform 0.2s ease, background 0.2s ease;
+}
+
+.activity-item:hover {
+  background: rgba(26, 26, 26, 0.8);
+  transform: translateX(5px);
+}
+
+.activity-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  background: rgba(6, 188, 238, 0.1);
+  border-radius: 50%;
+  margin-right: 16px;
+  color: #06bcee;
+}
+
+.activity-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex: 1;
+}
+
+.activity-description {
+  flex: 1;
+  color: #e0e0e0;
+  font-size: 0.95rem;
+}
+
+.activity-id {
+  background: rgba(6, 188, 238, 0.1);
+  color: #06bcee;
+  padding: 4px 12px;
+  border-radius: 16px;
+  font-size: 0.9rem;
+  text-decoration: none;
+  margin: 0 16px;
+  transition: background 0.2s ease;
+}
+
+.activity-id:hover {
+  background: rgba(6, 188, 238, 0.2);
+}
+
+.activity-time {
+  color: #888;
+  font-size: 0.85rem;
+  min-width: 80px;
+  text-align: right;
+}
+
+.see-more-btn {
+  width: 100%;
+  padding: 12px;
+  background: rgba(6, 188, 238, 0.1);
+  color: #06bcee;
+  border: none;
+  border-radius: 8px;
+  margin-top: 16px;
+  cursor: pointer;
+  font-size: 0.95rem;
+  transition: background 0.2s ease;
+}
+
+.see-more-btn:hover {
+  background: rgba(6, 188, 238, 0.2);
+}
+
+@media (max-width: 768px) {
+  .activity-content {
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+  
+  .activity-description {
+    width: 100%;
+    margin-bottom: 4px;
+  }
+  
+  .activity-id {
+    margin: 0;
+  }
+}
